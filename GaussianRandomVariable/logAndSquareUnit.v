@@ -22,56 +22,89 @@ module logAndSquareUnit(
 					 input 					clk,
 					 input 					reset,
 					 input 					enable,
-					 output 	[15:0]		output_h
+					 input	[15:0]		address,
+					 output 	[15:0]		output_h,
+					 output					h1_Done
 					 );
 					 
-	reg					loadSeed = 1'b0;
-	reg					resetSeed = 1'b1;
+
+	reg 		[3:0] 	state   		=3'b0;
+	reg		[15:0]	delta;
+	reg		[15:0]	h1_tmp;
+	
 	wire					seed_LogAndSquare = 32'h1234_4567;
 	wire 					rstTmp;
-	wire		[15:0]	Addr_16bits;
+	wire 		[31:0]	rng_32bits;
+	wire		[10:0]	Addr_11bits;
+	wire		[10:0]	AddrN_11bits;
+	wire		[15:0]	hData;
+	wire		[15:0]	hDataNext;				 
+	wire		[4:0] 	insertAddr;			 
+
+
+					
+					
+//*********** 对ROM 进行取值 ***************************************//
+assign  	Addr_11bits  = address [15:5];
+assign  	AddrN_11bits = address [15:5] + 11'b1;
+
+		
+		h1_rom h1_rom_uut(					//h1:  ( (-2)*ln(x) ) ^ (1/2) * 2^11
+					  .clka(clk),
+					  .addra(Addr_16bits),
+					  .douta(hData),
+					  .clkb(clk),
+					  .addrb(AddrN_16bits),
+					  .doutb(hDataNext)
+					);
+					
 	
-	parameter     		seed = 32'h5C27_66A3 ;				 
-					 
-//********** Initial *********************************//					 
-	always @ (posedge clk or negedge reset)
+//*********** 插值取地址 ********************************************//
+assign insertAddr  = address[4:0];
+
+	always@ (posedge clk or negedge reset)
 	begin
 		if(reset)
 		begin
-			output_h  <= 16'd0 ;
-			load_seed <= 1'b0;
-		end					//end of else(reset == 1'b1)
-		else
+			state <= 3'b0;
+			delta <= 0;
+			h1_Done <= 1'b0;
+		end		//end if (reset)
+		else 
 		begin
-			if(resetSeed == 1'b1)
-			begin
-				load_seed <= 1'b1;
-				seed_logAndSquare <= seed;
-				resetSeed <= 1'b0;
-			end				//end of else(resetSeed == 1'b1)
-			else
-			begin
-				load_seed <= 1'b0;
-			end				//end of else(resetSeed == 1'b0)
-		end				//end of else(reset == 1'b0)
-	end				// end of always
-	
-	
-//********** RNG for ROM address *********************************//		
-	
-		assign rstTmp = ~reset ;
+			case(state)
+			3'd0:
+				begin
+					if(hData > hDataNext)
+						delta <= hData - hDataNext;
+					else 
+						delta <= hDataNext - hData;
+					state <= 3'd1;
+				end			// end case 0
+			3'd1:
+				begin
+					delta <= delta << 5;
+					state <= 3'd2;
+				end			// end case 1
+			3'd2:
+				begin
+					delta <= delta*insertAddr;
+					state <= 3'd3;
+				end			// end case 2
+			3'd3:
+				begin
+					h1_tmp <= delta + hData;
+					h1_Done <= 1'b1;
+				end			// end case 3
+			default:
+				begin
+					h1_Done <= 1'b0;
+				end			// end default
+			endcase		//end case	
+		end		//end if (!reset)
+	end		//end always
 
-		rng 	rngRom1_uut (
-					.clk(clk),
-					.reset(rstTmp),
-					.loadseed_i(load_seed),
-					.seed_i(seed_logAndSquare),
-					.unmber_o(Addr_16bits)
-					);
-					
-//*********** 对ROM 进行取值 *******************//					
-
-	
+assign output_h = h1_tmp
 
 
 
