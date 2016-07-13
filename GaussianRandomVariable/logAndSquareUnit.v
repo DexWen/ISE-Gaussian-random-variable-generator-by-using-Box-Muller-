@@ -31,6 +31,7 @@ module logAndSquareUnit(
 	reg 		[3:0] 	state   		=3'b0;
 	reg		[15:0]	delta;
 	reg		[15:0]	h1_tmp;
+	reg					h1_Done;
 	
 	wire					seed_LogAndSquare = 32'h1234_4567;
 	wire 					rstTmp;
@@ -104,7 +105,7 @@ assign insertAddr  = address[4:0];
 		end		//end if (!reset)
 	end		//end always
 
-assign output_h = h1_tmp
+assign output_h = h1_tmp;
 
 
 

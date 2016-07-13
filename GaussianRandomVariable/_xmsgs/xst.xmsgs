@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"H:\git\GaussianGenerator\GaussianRandomVariable\multiplier16bits.v" Line 31: Redeclaration of ansi port <arg fmt="%s" index="1">y_out32bit</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"H:\git\GaussianGenerator\GaussianRandomVariable\logAndSquareUnit.v" Line 34: Redeclaration of ansi port <arg fmt="%s" index="1">h1_Done</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="25" delta="old" >"H:\git\GaussianGenerator\GaussianRandomVariable\Box_Muller_RNG.v" Line 94: Module &lt;<arg fmt="%s" index="1">rng</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">unmber_o</arg>&gt;.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"H:\git\GaussianGenerator\GaussianRandomVariable\Box_Muller_RNG.v" Line 89: Port <arg fmt="%s" index="1">number_o</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="462" delta="old" >"H:\git\GaussianGenerator\GaussianRandomVariable\Box_Muller_RNG.v" Line 58: if-condition does not match any sensitivity list edge
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"H:\git\GaussianGenerator\GaussianRandomVariable\Box_Muller_RNG.v" Line 56: Assignment to <arg fmt="%s" index="1">step_grv</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="error" file="HDLCompiler" num="267" delta="new" >"H:\git\GaussianGenerator\GaussianRandomVariable\Box_Muller_RNG.v" Line 94: Cannot find port <arg fmt="%s" index="1">unmber_o</arg> on this module
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"H:\git\GaussianGenerator\GaussianRandomVariable\Box_Muller_RNG.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">Box_Muller_RNG</arg>&gt; remains a black box.
+</msg>
+
+</messages>
+

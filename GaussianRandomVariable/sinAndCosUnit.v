@@ -137,28 +137,28 @@ assign insertAddrCos  = address[5:0];
 		end		//end if (reset)
 		else 
 		begin
-			case(state1)
+			case(state2)
 			3'd0:
 				begin
 					if(cosData > cosDataNext)
 						delta2 <= cosData - cosDataNext;
 					else 
 						delta2 <= cosDataNext - cosData;
-					state1 <= 3'd1;
+					state2 <= 3'd1;
 				end			// end case 0
 			3'd1:
 				begin
-					delta2 <= delta1 << 6;
+					delta2 <= delta2 << 6;
 					state2 <= 3'd2;
 				end			// end case 1
 			3'd2:
 				begin
-					delta2 <= delta1*insertAddrCos;
+					delta2 <= delta2*insertAddrCos;
 					state2 <= 3'd3;
 				end			// end case 2
 			3'd3:
 				begin
-					cosDataTmp <= delta1 + cosData;
+					cosDataTmp <= delta2 + cosData;
 					doneFlag2 <= 1'b1;
 				end			// end case 3
 			default:

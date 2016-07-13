@@ -23,24 +23,29 @@ module Box_Muller_RNG(
 		input 				reset,
 		input 				enable,
 		
-		output  	[15:0]	grv1,		//gaussian random variables
-		output  	[15:0]	grv2,
+		output  signed	[15:0]	grv1,		//gaussian random variables
+		output  signed	[15:0]	grv2,
 		output 				outputvalid
     );
 	 
 	 
-	reg					load_seed = 1'b0;
-	reg					resetSeed = 1'b1;
-	reg		[31:0]	grv_data1;
-	reg		[31:0]	grv_data2;
+	reg							load_seed = 1'b0;
+	reg							resetSeed = 1'b1;
+	wire	signed	[31:0]	grv_data1;
+	wire	signed	[31:0]	grv_data2;
+	reg							step_grv;
+	reg		[15:0]	sinTransfer_data;
+	reg		[15:0]	cosTransfer_data;
+	reg					outputvalid_reg;
+	reg		[31:0] 	seed_normal_RNG = 32'h1234_4567;//Initial Value
 	
-	wire		[31:0] 	seed_normal_RNG = 32'h1234_4567;//Initial Value
 	wire 					rstTmp				= 1'b0;
 	wire 		[31:0]	rng_32bits 			= 32'b0;
 	wire		[15:0]	h1_addr_16bits  	= 16'b0;
 	wire					h1_doneFlag;
 	wire		[15:0]	h1_data;
 	wire		[15:0]	h2_addr_16bits  	= 16'b0;
+	
 	
 	wire		[15:0]	sin_data;
 	wire		[15:0]	cos_data;
@@ -52,11 +57,12 @@ module Box_Muller_RNG(
 	begin
 		if(reset)
 		begin
-			grv  <= 16'd0 ;
+
 			load_seed <= 1'b0;
-			outputvalid	<= 1'b0;
+			outputvalid_reg	<= 1'b0;
+			step_grv <=2'b0;
 		end					//end of else(reset == 1'b1)
-		else
+		else if(!reset)
 		begin
 			if(resetSeed == 1'b1)
 			begin
@@ -64,7 +70,7 @@ module Box_Muller_RNG(
 				seed_normal_RNG <= seed;
 				resetSeed <= 1'b0;
 			end				//end of else(resetSeed == 1'b1)
-			else
+		else 
 			begin
 				load_seed <= 1'b0;
 			end				//end of else(resetSeed == 1'b0)
@@ -85,7 +91,7 @@ module Box_Muller_RNG(
 					.reset(rstTmp),
 					.loadseed_i(load_seed),
 					.seed_i(seed_normal_RNG),
-					.unmber_o(rng_32bits)		//32bits
+					.number_o(rng_32bits)		//32bits
 					);
 //*********** h1-> ( (-2)*ln(x) ) ^ (1/2) *******************************************//
    assign h1_addr_16bits = rng_32bits[15:0];
@@ -120,13 +126,58 @@ module Box_Muller_RNG(
 	begin
 		if(readyForMerge)
 		begin
-			grv_data1 <= h1_data * sin_data;
-			grv_data2 <= h1_data * cos_data;
+			
+			case({rng_32bits[13],rng_32bits[5]})
+			2'd0:
+			begin
+				sinTransfer_data <=  sin_data;
+				cosTransfer_data <=  cos_data;
+				outputvalid_reg	<= 1'b1;
+			end
+			2'd1:
+			begin
+				sinTransfer_data <=  {~sin_data[15:0]+1'b1};
+				cosTransfer_data <=  cos_data;
+				outputvalid_reg	<= 1'b1;
+			end
+			2'd2:
+			begin
+				sinTransfer_data <=  sin_data;
+				cosTransfer_data <=  {~cos_data[15:0]+1'b1};
+				outputvalid_reg	<= 1'b1;
+			end
+			2'd3:
+			begin
+				sinTransfer_data <=  {~sin_data[15:0]+1'b1};
+				cosTransfer_data <=  {~cos_data[15:0]+1'b1};
+				outputvalid_reg	<= 1'b1;
+			end
+			default: ;
+			endcase	//end case
 		end	//end of if(readyForMerge)
-	
 	end	//end always
 
+
+
+multiplier16buts multi_uut1( 
+					.clk(clk),
+					.reset(reset),
+					.a_in16bit(h1_data),	//输入16位有符号数
+					.b_in16bit(sinTransfer_data),	
+					.y_out32bit(grv_data1) 			//输出32位有符号数
+								);  
+								
+multiplier16buts multi_uut2( 
+					.clk(clk),
+					.reset(reset),
+					.a_in16bit(h1_data),	//输入16位有符号数
+					.b_in16bit(cosTransfer_data),	
+					.y_out32bit(grv_data2) 			//输出32位有符号数
+								);  								
+	
+	
 assign 	grv1 = {grv_data1[31], grv_data1[22:12]};
 assign 	grv2 = {grv_data2[31], grv_data2[22:12]};		
+assign 	outputvalid=outputvalid_reg;
 	
 endmodule
