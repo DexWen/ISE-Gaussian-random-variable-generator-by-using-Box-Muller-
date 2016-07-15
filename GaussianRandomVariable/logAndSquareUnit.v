@@ -5,9 +5,9 @@
 // Engineer: 
 // 
 // Create Date:    15:45:10 07/11/2016 
-// Design Name: 
+// Design Name:    
 // Module Name:    logAndSquareUnit 
-// Project Name: 
+// Project Name: 	Box-Muller
 // Target Devices: 
 // Tool versions: 
 // Description: 
@@ -17,7 +17,7 @@
 // Revision: 
 // Revision 0.01 - File Created
 // Additional Comments: 
-//
+// 
 //////////////////////////////////////////////////////////////////////////////////
 module logAndSquareUnit(
 					 input 					clk,
