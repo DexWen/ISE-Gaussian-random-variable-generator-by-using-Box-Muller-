@@ -1,3 +1,4 @@
+<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
 verilog work "ipcore_dir/h1_rom.v"
 verilog work "ipcore_dir/g1cos_BoxMuller_rom.v"
 verilog work "ipcore_dir/g0sin_BoxMuller_rom.v"
@@ -6,3 +7,13 @@ verilog work "rng.v"
 verilog work "multiplier16bits.v"
 verilog work "logAndSquareUnit.v"
 verilog work "Box_Muller_RNG.v"
+=======
+verilog work "ipcore_dir/h1_rom.v"
+verilog work "ipcore_dir/g1cos_BoxMuller_rom.v"
+verilog work "ipcore_dir/g0sin_BoxMuller_rom.v"
+verilog work "sinAndCosUnit.v"
+verilog work "rng.v"
+verilog work "multiplier16bits.v"
+verilog work "logAndSquareUnit.v"
+verilog work "Box_Muller_RNG.v"
+>>>>>>> daily update

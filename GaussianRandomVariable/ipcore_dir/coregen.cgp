@@ -1,3 +1,4 @@
+<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
 SET busformat = BusFormatAngleBracketNotRipped
 SET designentry = Verilog
 SET device = xc7a100t
@@ -7,3 +8,14 @@ SET package = csg324
 SET speedgrade = -3
 SET verilogsim = true
 SET vhdlsim = false
+=======
+SET busformat = BusFormatAngleBracketNotRipped
+SET designentry = Verilog
+SET device = xc7a100t
+SET devicefamily = artix7
+SET flowvendor = Other
+SET package = csg324
+SET speedgrade = -3
+SET verilogsim = true
+SET vhdlsim = false
+>>>>>>> daily update

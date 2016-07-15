@@ -26,4 +26,8 @@ LINE Wide 576 368 544 368
 PIN 576 368 RIGHT 36
 PINATTR PinName doutb[15:0]
 PINATTR Polarity OUT
+<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
 
+=======
+
+>>>>>>> daily update

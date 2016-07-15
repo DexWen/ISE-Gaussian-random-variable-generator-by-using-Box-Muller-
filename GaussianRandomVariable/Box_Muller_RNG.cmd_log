@@ -1,3 +1,4 @@
+<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
 xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
 xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
 xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
@@ -9,3 +10,16 @@ xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Mull
 xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
 xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
 xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+=======
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+xst -intstyle ise -ifn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.xst" -ofn "H:/git/GaussianGenerator/GaussianRandomVariable/Box_Muller_RNG.syr" 
+>>>>>>> daily update

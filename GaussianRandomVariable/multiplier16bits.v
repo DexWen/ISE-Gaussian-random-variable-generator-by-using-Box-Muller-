@@ -1,3 +1,4 @@
+<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -24,6 +25,34 @@ module multiplier16buts (
 					input	[15:0]	a_in16bit,	//输入16位有符号数
 					input	[15:0]	b_in16bit,	
 					output[31:0]	y_out32bit 	//输出32位有符号数
+=======
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    10:57:10 07/13/2016 
+// Design Name: 
+// Module Name:    multiplier16bits 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module multiplier16buts ( 
+					input				clk,
+					input				reset,
+					input	[15:0]	a_in16bit,	//输入16位有符号数
+					input	[15:0]	b_in16bit,	
+					output[31:0]	y_out32bit 	//输出32位有符号数
+>>>>>>> daily update
 								);           		//16位有符号数乘法器，输出32位有符号数
 
 
@@ -34,7 +63,11 @@ module multiplier16buts (
   reg	[29:0]   x6;            			//30位寄存器，存放15位有效数位相乘结果
   reg	[31:0]   x7;            			//用来存放输出数据的原码
  
+<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
  always@ (negedge clk )
+=======
+ always@ (posedge clk )
+>>>>>>> daily update
 	 begin
 		if( reset )              //复位使能，寄存器清零
 			begin

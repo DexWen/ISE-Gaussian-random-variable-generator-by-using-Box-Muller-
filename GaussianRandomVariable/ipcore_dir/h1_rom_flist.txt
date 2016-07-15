@@ -1,3 +1,4 @@
+<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
 # Output products list for <h1_rom>
 _xmsgs\pn_parser.xmsgs
 h1_rom.asy
@@ -54,3 +55,61 @@ h1_rom\simulation\timing\wave_ncsim.sv
 h1_rom_flist.txt
 h1_rom_xmdf.tcl
 summary.log
+=======
+# Output products list for <h1_rom>
+_xmsgs\pn_parser.xmsgs
+h1_rom.asy
+h1_rom.gise
+h1_rom.mif
+h1_rom.ngc
+h1_rom.sym
+h1_rom.v
+h1_rom.veo
+h1_rom.xco
+h1_rom.xise
+h1_rom\blk_mem_gen_v7_3_readme.txt
+h1_rom\doc\blk_mem_gen_v7_3_vinfo.html
+h1_rom\doc\pg058-blk-mem-gen.pdf
+h1_rom\example_design\h1_rom_exdes.ucf
+h1_rom\example_design\h1_rom_exdes.vhd
+h1_rom\example_design\h1_rom_exdes.xdc
+h1_rom\example_design\h1_rom_prod.vhd
+h1_rom\implement\implement.bat
+h1_rom\implement\implement.sh
+h1_rom\implement\planAhead_ise.bat
+h1_rom\implement\planAhead_ise.sh
+h1_rom\implement\planAhead_ise.tcl
+h1_rom\implement\xst.prj
+h1_rom\implement\xst.scr
+h1_rom\simulation\addr_gen.vhd
+h1_rom\simulation\bmg_stim_gen.vhd
+h1_rom\simulation\bmg_tb_pkg.vhd
+h1_rom\simulation\functional\simcmds.tcl
+h1_rom\simulation\functional\simulate_isim.bat
+h1_rom\simulation\functional\simulate_mti.bat
+h1_rom\simulation\functional\simulate_mti.do
+h1_rom\simulation\functional\simulate_mti.sh
+h1_rom\simulation\functional\simulate_ncsim.sh
+h1_rom\simulation\functional\simulate_vcs.sh
+h1_rom\simulation\functional\ucli_commands.key
+h1_rom\simulation\functional\vcs_session.tcl
+h1_rom\simulation\functional\wave_mti.do
+h1_rom\simulation\functional\wave_ncsim.sv
+h1_rom\simulation\h1_rom_synth.vhd
+h1_rom\simulation\h1_rom_tb.vhd
+h1_rom\simulation\random.vhd
+h1_rom\simulation\timing\simcmds.tcl
+h1_rom\simulation\timing\simulate_isim.bat
+h1_rom\simulation\timing\simulate_mti.bat
+h1_rom\simulation\timing\simulate_mti.do
+h1_rom\simulation\timing\simulate_mti.sh
+h1_rom\simulation\timing\simulate_ncsim.sh
+h1_rom\simulation\timing\simulate_vcs.sh
+h1_rom\simulation\timing\ucli_commands.key
+h1_rom\simulation\timing\vcs_session.tcl
+h1_rom\simulation\timing\wave_mti.do
+h1_rom\simulation\timing\wave_ncsim.sv
+h1_rom_flist.txt
+h1_rom_xmdf.tcl
+summary.log
+>>>>>>> daily update

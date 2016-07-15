@@ -1,3 +1,4 @@
+<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
 # Output products list for <g1cos_BoxMuller_rom>
 _xmsgs\pn_parser.xmsgs
 g1cos_BoxMuller_rom.asy
@@ -54,3 +55,61 @@ g1cos_BoxMuller_rom\simulation\timing\wave_ncsim.sv
 g1cos_BoxMuller_rom_flist.txt
 g1cos_BoxMuller_rom_xmdf.tcl
 summary.log
+=======
+# Output products list for <g1cos_BoxMuller_rom>
+_xmsgs\pn_parser.xmsgs
+g1cos_BoxMuller_rom.asy
+g1cos_BoxMuller_rom.gise
+g1cos_BoxMuller_rom.mif
+g1cos_BoxMuller_rom.ngc
+g1cos_BoxMuller_rom.sym
+g1cos_BoxMuller_rom.v
+g1cos_BoxMuller_rom.veo
+g1cos_BoxMuller_rom.xco
+g1cos_BoxMuller_rom.xise
+g1cos_BoxMuller_rom\blk_mem_gen_v7_3_readme.txt
+g1cos_BoxMuller_rom\doc\blk_mem_gen_v7_3_vinfo.html
+g1cos_BoxMuller_rom\doc\pg058-blk-mem-gen.pdf
+g1cos_BoxMuller_rom\example_design\g1cos_BoxMuller_rom_exdes.ucf
+g1cos_BoxMuller_rom\example_design\g1cos_BoxMuller_rom_exdes.vhd
+g1cos_BoxMuller_rom\example_design\g1cos_BoxMuller_rom_exdes.xdc
+g1cos_BoxMuller_rom\example_design\g1cos_BoxMuller_rom_prod.vhd
+g1cos_BoxMuller_rom\implement\implement.bat
+g1cos_BoxMuller_rom\implement\implement.sh
+g1cos_BoxMuller_rom\implement\planAhead_ise.bat
+g1cos_BoxMuller_rom\implement\planAhead_ise.sh
+g1cos_BoxMuller_rom\implement\planAhead_ise.tcl
+g1cos_BoxMuller_rom\implement\xst.prj
+g1cos_BoxMuller_rom\implement\xst.scr
+g1cos_BoxMuller_rom\simulation\addr_gen.vhd
+g1cos_BoxMuller_rom\simulation\bmg_stim_gen.vhd
+g1cos_BoxMuller_rom\simulation\bmg_tb_pkg.vhd
+g1cos_BoxMuller_rom\simulation\functional\simcmds.tcl
+g1cos_BoxMuller_rom\simulation\functional\simulate_isim.bat
+g1cos_BoxMuller_rom\simulation\functional\simulate_mti.bat
+g1cos_BoxMuller_rom\simulation\functional\simulate_mti.do
+g1cos_BoxMuller_rom\simulation\functional\simulate_mti.sh
+g1cos_BoxMuller_rom\simulation\functional\simulate_ncsim.sh
+g1cos_BoxMuller_rom\simulation\functional\simulate_vcs.sh
+g1cos_BoxMuller_rom\simulation\functional\ucli_commands.key
+g1cos_BoxMuller_rom\simulation\functional\vcs_session.tcl
+g1cos_BoxMuller_rom\simulation\functional\wave_mti.do
+g1cos_BoxMuller_rom\simulation\functional\wave_ncsim.sv
+g1cos_BoxMuller_rom\simulation\g1cos_BoxMuller_rom_synth.vhd
+g1cos_BoxMuller_rom\simulation\g1cos_BoxMuller_rom_tb.vhd
+g1cos_BoxMuller_rom\simulation\random.vhd
+g1cos_BoxMuller_rom\simulation\timing\simcmds.tcl
+g1cos_BoxMuller_rom\simulation\timing\simulate_isim.bat
+g1cos_BoxMuller_rom\simulation\timing\simulate_mti.bat
+g1cos_BoxMuller_rom\simulation\timing\simulate_mti.do
+g1cos_BoxMuller_rom\simulation\timing\simulate_mti.sh
+g1cos_BoxMuller_rom\simulation\timing\simulate_ncsim.sh
+g1cos_BoxMuller_rom\simulation\timing\simulate_vcs.sh
+g1cos_BoxMuller_rom\simulation\timing\ucli_commands.key
+g1cos_BoxMuller_rom\simulation\timing\vcs_session.tcl
+g1cos_BoxMuller_rom\simulation\timing\wave_mti.do
+g1cos_BoxMuller_rom\simulation\timing\wave_ncsim.sv
+g1cos_BoxMuller_rom_flist.txt
+g1cos_BoxMuller_rom_xmdf.tcl
+summary.log
+>>>>>>> daily update
