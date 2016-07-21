@@ -68,7 +68,7 @@ end
  Standard_2_35=A+(Standard_10.*sigma);
  [y1 x1]=hist(Standard_2_35, 1000);
  h1=plot(x1,y1,'r');
- legend('宝宝小JJ ','脸还很大');
+ legend('0 ','0');
  hold on;
  
  %--------------- 3 --------------------------------
@@ -193,7 +193,7 @@ end
  Standard_2_35=A+(Standard_10.*sigma);
  [y1 x1]=hist(Standard_2_35, 1000);
  h1=plot(x1,y1,'r');
- legend('宝宝小JJ ','脸还很大');
+ legend('0 ','0');
  hold on;
  
  %--------------- 3 --------------------------------
@@ -248,5 +248,5 @@ end
 % 
 % grid on;
 
->>>>>>> daily update
+
  
