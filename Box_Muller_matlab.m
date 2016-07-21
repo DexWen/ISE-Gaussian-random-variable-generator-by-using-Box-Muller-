@@ -1,4 +1,4 @@
-<<<<<<< 06f93c07eb6db127e1822abe99b171b9e456bead
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Channel simulation for NVM 
 %   1) Simulation of the Gaussian random variables using Box-Muller
@@ -123,7 +123,6 @@ end
 % 
 % grid on;
 
-=======
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Channel simulation for NVM 
 %   1) Simulation of the Gaussian random variables using Box-Muller
@@ -244,6 +243,7 @@ end
 % hold on;
 % 
 % h2=plot(x,w2,'r');
+
 % hold on;
 % 
 % grid on;
